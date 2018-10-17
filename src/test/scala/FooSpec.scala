@@ -11,6 +11,8 @@ class FooSpec extends FlatSpec with Matchers {
   "circe" should "encode opt" in {
     val e = implicitly[Encoder[Option[Foo]]]
     val r = Foo(bar = None)
-    e.apply(Some(r)).noSpaces should equal("""{"bar":null}""")
+    val str = e.apply(Some(r)).noSpaces
+    println(str)
+    str should equal("""{"bar":null}""")
   }
 }

@@ -1,3 +1,6 @@
+
+scalaVersion := "2.12.7"
+
 val circeV        = "0.10.0"
 
 libraryDependencies ++= Seq(
